@@ -82,11 +82,30 @@ def verificar_tabuleiro():
     return False
 
 
-""" def jogada_computador():
+def jogada_computador():
     jogada = random.randint(0, 8)
 
     while tabuleiro[jogada] == "X" or tabuleiro[jogada] == "O":
         jogada = random.randint(0, 8)
 
     tabuleiro[jogada] = "X"
- """
+    mostrar_tabuleiro()
+
+def jogada_usuario(posicao):
+    mostrar_tabuleiro()
+    while tabuleiro[posicao] == "X" or tabuleiro[posicao] == "O":
+        print("Essa posição já foi ocupada! Digite novamente")
+        mostrar_tabuleiro()
+        posicao = int(input("Escolha uma posição para jogar: "))
+    if tabuleiro[posicao] != "X" and tabuleiro[posicao] != "O":
+        tabuleiro[posicao] = "O"
+        mostrar_tabuleiro()
+
+posicao = int(input("Escolha uma posição para jogar: "))
+jogada_usuario(posicao)
+jogada_computador()
+posicao = int(input("Escolha uma posição para jogar: "))
+jogada_usuario(posicao)
+
+# Transformar a sequência de jogadas em um laço while.
+# Começar a verificar o tabuleiro entre jogadas.
