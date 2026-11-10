@@ -101,11 +101,16 @@ def jogada_usuario(posicao):
         tabuleiro[posicao] = "O"
         mostrar_tabuleiro()
 
-posicao = int(input("Escolha uma posição para jogar: "))
-jogada_usuario(posicao)
-jogada_computador()
-posicao = int(input("Escolha uma posição para jogar: "))
-jogada_usuario(posicao)
+while verificar_tabuleiro() == True:
+    posicao = int(input("Escolha uma posição para jogar: "))
+    jogada_usuario(posicao)
+    verificar_tabuleiro()
+    jogada_computador()
+    verificar_tabuleiro()
 
-# Transformar a sequência de jogadas em um laço while.
+
+
+# Conferir o laço de jogadas while. Diferenciar vitórias da falta de espaço para novas jogadas.
 # Começar a verificar o tabuleiro entre jogadas.
+
+# As posições deveriam ser de 1 a 9.
