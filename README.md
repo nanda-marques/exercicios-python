@@ -14,7 +14,7 @@ Repositório criado para armazenar códigos de pequenos projetos, atividades pr�
 
 *   **AE2** — Algoritmos e Estrutura de Dados II.
 *   **controle-financeiro** — Projeto em desenvolvimento aplicando conceitos de Classes.
-*   **curso-cisco** — Exercícios - Fundamentos do Python 1 (Cisco Networking Academy).
+*   **curso-cisco** — Fundamentos do Python 1 (Cisco Networking Academy) - Exercícios e pequenos projetos.
 *   **docs** — Comandos e atalhos aprendidos.
 *   **fase1_2026_interfatecs** — Resoluções dos exercícios da Fase 01 da Interfatecs 2026.
 
