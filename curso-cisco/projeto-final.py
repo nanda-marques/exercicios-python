@@ -6,7 +6,8 @@ import random
 # O = Usuário
 
 tabuleiro = [0, 1, 2, 3, "X", 5, 6, 7, 8]
-
+jogador = 0
+computador = 0
 
 def mostrar_tabuleiro():
     contador = 0
@@ -22,7 +23,6 @@ def mostrar_tabuleiro():
 
 
 def verificar_tabuleiro():
-
     # Linhas horizontais
     if tabuleiro[0] == tabuleiro[1] == tabuleiro[2]:
         if tabuleiro[0] == "X":
@@ -81,6 +81,15 @@ def verificar_tabuleiro():
 
     return False
 
+def fim_de_jogo():
+    if verificar_tabuleiro() == False:
+        print("Empate!")
+    elif verificar_tabuleiro() == "usuario":
+        print(f"Parabéns! Você ganhou! {jogador+1} x {computador}")
+    elif verificar_tabuleiro() == "computador":
+        print(f"Parabéns! Você ganhou! {jogador} x {computador+1}")
+    else:
+        pass
 
 def jogada_computador():
     jogada = random.randint(0, 8)
@@ -105,12 +114,8 @@ while verificar_tabuleiro() == True:
     posicao = int(input("Escolha uma posição para jogar: "))
     jogada_usuario(posicao)
     verificar_tabuleiro()
+    fim_de_jogo()
+
     jogada_computador()
     verificar_tabuleiro()
-
-
-
-# Conferir o laço de jogadas while. Diferenciar vitórias da falta de espaço para novas jogadas.
-# Começar a verificar o tabuleiro entre jogadas.
-
-# As posições deveriam ser de 1 a 9.
+    fim_de_jogo()
