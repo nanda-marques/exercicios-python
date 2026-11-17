@@ -42,3 +42,12 @@ git reset # (remove todas adições)
 ```PowerShell
 Remove-Item -Recurse -Force .git
 ```
+
+## Gitignore 
+
+Para evitar que pastas como `__pycache__` sejam versionado (na raiz ou em subpastas), adicione **/`__pycache__/` e `*.py[cod]` no arquivo `.gitignore`
+
+Caso já tenham sido adicionadas e o Git ainda insista em rastreá-las por já estarem no histórico, execute 
+```cmd
+Get-ChildItem -Recurse -Filter "__pycache__" | ForEach-Object { git rm -r --cached $_.FullName }
+```
