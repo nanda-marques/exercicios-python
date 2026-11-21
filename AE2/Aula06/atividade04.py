@@ -23,7 +23,7 @@ salarios = pd.read_csv('salarios.csv')
 print("Nomes das colunas do csv:")
 print(salarios.columns)
 
-# Seleciona a coluna que contém os salários
+# coluna que contém os salários
 coluna_salario = salarios['salario']
 
 # CRIAÇÃO DA PILHA
@@ -33,19 +33,15 @@ class Salarios:
         self.itens = []
 
     def isEmpty(self):
-        # Verifica se a pilha está vazia
         return self.itens == []
 
     def push(self, item):
-        # Adiciona um salário ao topo da pilha
         self.itens.append(item)
 
     def pop(self):
-        # Remove e retorna o último salário inserido
         return self.itens.pop()
 
     def peek(self):
-        # Consulta o salário do topo sem removê-lo
         return self.itens[len(self.itens)-1]
 
 # FUNÇÃO RECURSIVA
@@ -55,13 +51,11 @@ def principal(coluna_salario, itens, soma):
     if len(coluna_salario) == 0:
         return soma
 
-    # Pega o primeiro salário da lista
     salario_atual = coluna_salario[0]
 
     # Soma o salário atual ao valor acumulado
     soma += salario_atual
 
-    # Adiciona o salário atual ao topo da pilha
     itens.push(salario_atual)
 
     # Chama a função novamente com os salários restantes
