@@ -12,12 +12,15 @@ Repositório criado para armazenar códigos de pequenos projetos, atividades pr�
 
 ## Estrutura de Pastas
 
-*   **AE2** — Algoritmos e Estrutura de Dados II.
-*   **controle-financeiro** — Projeto em desenvolvimento aplicando conceitos de Classes.
+*   **atividades-exercicios** — Contém tarefas/exercícios de:
+    - Algoritmos e Estrutura de Dados II;
+    - Lógica Computacional;
+    - Mini-cursos e atividades gerais.
+    - InterFatecs
 *   **curso-cisco** — Fundamentos do Python 1 (Cisco Networking Academy) - Exercícios e pequenos projetos.
 *   **docs** — Comandos e atalhos aprendidos.
-*   **fase1_2026_interfatecs** — Resoluções dos exercícios da Fase 01 da Interfatecs 2026.
-
+*   **mini-projetos** — Projetos simples que aplicam conceitos básicos de python:
+    - controle-financeiro - (em desenvolvimento) aplica conceitos de Classes.
 
 ## Documentação (/Docs)
 
